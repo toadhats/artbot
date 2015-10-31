@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Artbot 420 by toadhats</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Artbot 420</h1>
+        <p class="header">Aleatoric drawing in Processing</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/toadhats/artbot-420/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/toadhats/artbot-420/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/toadhats/artbot-420">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/toadhats">toadhats</a></p>
+
+
+      </header>
+      <section>
+        
+
+<h3>
+<a id="artbot-420" class="anchor" href="#artbot-420" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artbot 420</h3>
+
+<h2>
+<a id="aleatoric-drawing-in-processing" class="anchor" href="#aleatoric-drawing-in-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aleatoric drawing in Processing.</h2>
+
+<p>A bunch of functions thrown haphazardly together with almost no user interaction beyond editing the code. However, you can:</p>
+
+<ul>
+<li>Click anywhere to pause the drawing</li>
+<li>Press Shift-S to save the drawing to /img</li>
+<li>Press Backspace to clear the canvas</li>
+</ul>
+
+<h2>
+<a id="functions" class="anchor" href="#functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h2>
+
+<h1>
+<a id="drip" class="anchor" href="#drip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drip()</h1>
+
+<p>Distributes shapes (circles) evenly around a centre point using a Gaussian distribution.
+Looks like paint drips, or something. When used alongside squiggle() it adds a sense of depth in the centre,
+and soft detail noise over the rest, or however you want to think of it. </p>
+
+<p><img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/2015-10-29%2021_30_48-sketch_151029a.png" height="300" width="300">
+<img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/2015-10-29%2021_43_59-sketch_151029a.png" height="300" width="300"></p>
+
+<h1>
+<a id="squiggle" class="anchor" href="#squiggle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Squiggle()</h1>
+
+<p>Kinda 'scribbles' randomly, as if with a permanent marker. Looks cool with evolving colour.
+The offset allows multiple "squigglers" to be instantiated without giving each its own
+t variable for the perlin noise function. Without different offsets, they'd follow the same path,
+which is generally not what I want. Each call draws a single point along the path, so call in a
+loop.</p>
+
+<p><img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/2015-10-29%2023_04_53-sketch_151029a.png" height="300" width="300">
+<img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/2015-10-29%2023_37_50-sketch_151029a.png" height="300" width="300"></p>
+
+<h1>
+<a id="signal" class="anchor" href="#signal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Signal()</h1>
+
+<p>Draws a squiggly line across the page. Like a squiggler, but the x moves from
+left to right, while the y value is randomized over time via perlin noise. Draws
+one whole line per call, unlike the squiggler.</p>
+
+<p>Uses its x-coord as a t value, which means we're basically graphing the
+perlin function.Offset determines what 'part' of the perlin space we're
+graphing. Scale controls the speed through perlin space, ie 'jaggedness'.</p>
+
+<p><img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/20151030-210556.png" height="300" width="300">
+<img src="https://raw.githubusercontent.com/toadhats/artbot-420/master/img/20151030-203016.png" height="300" width="300"></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-69454178-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
