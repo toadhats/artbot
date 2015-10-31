@@ -21,7 +21,7 @@ void mouseClicked() {
 
 void mouseWheel(MouseEvent event) {
 
-  if (event.getCount() + mouseWheel >= 0 && event.getCount() + mouseWheel <= 255) { // ignore input that would take us out of bounds 
+  if (event.getCount() + mouseWheel >= 0 && event.getCount() + mouseWheel <= 255) { // ignore input that would take us out of bounds
     mouseWheel = (mouseWheel + event.getCount()) % 256;
   } // end if
   println(mouseWheel);
@@ -30,7 +30,7 @@ void mouseWheel(MouseEvent event) {
 
 /**
  #KEYS#
- 
+
  Backspace = Clear screen
  Shift + s = Save current image to file
  **/
@@ -60,7 +60,7 @@ void setup() {
 } // end setup()
 
 /**
- So far the idea is just to sloppily rewrite this section for each different image/idea, 
+ So far the idea is just to sloppily rewrite this section for each different image/idea,
  code as art? The individual functions are the serious part.
  **/
 void draw() {
@@ -87,7 +87,7 @@ void draw() {
 /**
  Distributes shapes (circles) evenly around a centre point using a Gaussian distribution.
  **/
-void drip() { 
+void drip() {
   float sd = 80;
   float mean = 400;
   float xnum = (float) generator.nextGaussian();
@@ -103,7 +103,7 @@ void drip() {
   ellipse(x, y, 16, 16);
 } // end drip()
 
-/** 
+/**
  Kinda 'scribbles' randomly, as if with a permanent marker. Looks cool with evolving colour.
  The offset allows multiple squigglers to be instantiated without giving each its own
  t value for the perlin noise function. Without different offsets, they'd follow the same path,
@@ -125,10 +125,10 @@ void squiggle(color colour, int offset) {
 /**
  Draws a squiggly line across the page. Like a squiggler, but the x moves from
  left to right, while the y value is randomized over time via perlin noise. Draws
- one whole line per call, unlike the squiggler. 
- 
- Uses its x-coord as a t value, which means we're basically graphing the 
- perlin function.Offset determines what 'part' of the perlin space we're 
+ one whole line per call, unlike the squiggler.
+
+ Uses its x-coord as a t value, which means we're basically graphing the
+ perlin function.Offset determines what 'part' of the perlin space we're
  graphing. Scale controls the speed through perlin space, ie 'jaggedness'.
  **/
 void signal(color colour, float scale, float offset) {
@@ -146,9 +146,9 @@ void signal(color colour, float scale, float offset) {
 
 /** #COLOUR FUNCTIONS# **/
 
-/** 
+/**
  Transitions between colours in a Perlin noise pattern
- Specifying the seed is basically the only way to influence 
+ Specifying the seed is basically the only way to influence
  the colours you'll get
  **/
 color evolvingColour(int seed) {
@@ -162,8 +162,8 @@ color evolvingColour(int seed) {
 
 /** #UTILITY FUNCTIONS# **/
 
-/** 
- Draws a semitransparent background, which fades everything on 
+/**
+ Draws a semitransparent background, which fades everything on
  screen by a given amount
  **/
 void fade(int amount) {
