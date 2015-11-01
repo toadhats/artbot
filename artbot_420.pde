@@ -51,7 +51,7 @@ void keyPressed() {
 void setup() {
   pause = false;
   size(800, 800);
-  frameRate(120);
+  frameRate(60);
   background(BGCOL);
   generator = new Random();
   t = 0;
