@@ -1,4 +1,4 @@
-# artbot-420
+# artbot
 procedural/algorithmic drawing in Processing
 
 <table>
